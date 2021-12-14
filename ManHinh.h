@@ -1,6 +1,11 @@
+#pragma once
 #include "Item.h"
 
 class ManHinh : public Item {
+protected:
+    string BienThe;
 public:
-    bool isSoldOut() = 0;
-}
+    void Xuat(ostream &os) {
+        os << Loai << "," << BienThe << "," << Ten << "," << Mau << "," << Gia << "," << SL << endl;
+    }
+};

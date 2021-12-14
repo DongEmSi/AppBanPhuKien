@@ -1,11 +1,14 @@
+#pragma once
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Item {
 protected:
-    string TenSP;
+    string Loai;
+    string BienThe;
+    string Ten;
     string Mau;
-    int SoLuong;
-public:
-    virtual ~Item();
-}
+    int SL;
+    double Gia;
+};

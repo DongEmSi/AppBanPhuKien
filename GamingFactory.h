@@ -1,14 +1,17 @@
 #include "AbstractFactory.h"
+#include "ChuotGaming.h"
+#include "BanPhimGaming.h"
+#include "ManHinhGaming.h"
 
 class GamingFactory : public AbstractFactory {
 public:
-    BanPhim *CreateBanPhim() const {
-        return new BanPhimGaming();
+    BanPhim *CreateBanPhim(string loai, string bienthe, string ten, string mau, double gia, int sl) const {
+        return new BanPhimGaming(loai, bienthe, ten, mau, gia, sl);
     }
-    ManHinh *CreateManHinh() const {
-        return new ManHinhGaming();
+    ManHinh *CreateManHinh(string loai, string bienthe, string ten, string mau, double gia, int sl) const {
+        return new ManHinhGaming(loai, bienthe, ten, mau, gia, sl);
     }
-    Chuot *CreateChuot() const {
-        return new ChuotGaming();
+    Chuot *CreateChuot(string loai, string bienthe, string ten, string mau, double gia, int sl) const {
+        return new ChuotGaming(loai, bienthe, ten, mau, gia, sl);
     }
-}
+};
