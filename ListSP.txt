@@ -1,0 +1,3 @@
+Man hinh,Gaming,A00,Do,23000,23
+Chuot,Hien dai,B00,Den,23000,23
+Ban phim,Toi gian,C00,Xanh,23000,23
