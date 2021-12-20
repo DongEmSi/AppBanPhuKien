@@ -1,3 +1,11 @@
-Man hinh,Gaming,A00,Do,23000,23
-Chuot,Hien dai,B00,Den,23000,23
-Ban phim,Toi gian,C00,Xanh,23000,23
+Vui long khong xoa dong nay
+1, 2, 3, 4, 5 = loai, bien the, ten, mau, gia, so luong
+1 = { 0, 1, 2 } ~{ban phim, chuot, man hinh}
+2 = { 0, 1, 2 } ~{gaming, toi gian, hien dai}
+Vui long khong xoa dong nay|
+0,1,BP123,Xanh,23000,23
+0,0,BP121,Den,56000,12
+0,2,BP696,Hong,123000,2
+1,2,C123,Tim,45000,6
+1,2,C100,Den,23000,23
+2,0,A00,Do,23000,23

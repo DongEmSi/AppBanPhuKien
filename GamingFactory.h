@@ -5,13 +5,13 @@
 
 class GamingFactory : public AbstractFactory {
 public:
-    BanPhim *CreateBanPhim(string loai, string bienthe, string ten, string mau, double gia, int sl) const {
-        return new BanPhimGaming(loai, bienthe, ten, mau, gia, sl);
+    BanPhim *CreateBanPhim(loai Loai, bienthe BienThe, string Ten, string Mau, double Gia, int Sl) const {
+        return new BanPhimGaming(Loai, BienThe, Ten, Mau, Gia, Sl);
     }
-    ManHinh *CreateManHinh(string loai, string bienthe, string ten, string mau, double gia, int sl) const {
-        return new ManHinhGaming(loai, bienthe, ten, mau, gia, sl);
+    ManHinh *CreateManHinh(loai Loai, bienthe BienThe, string Ten, string Mau, double Gia, int Sl) const {
+        return new ManHinhGaming(Loai, BienThe, Ten, Mau, Gia, Sl);
     }
-    Chuot *CreateChuot(string loai, string bienthe, string ten, string mau, double gia, int sl) const {
-        return new ChuotGaming(loai, bienthe, ten, mau, gia, sl);
+    Chuot *CreateChuot(loai Loai, bienthe BienThe, string Ten, string Mau, double Gia, int Sl) const {
+        return new ChuotGaming(Loai, BienThe, Ten, Mau, Gia, Sl);
     }
 };

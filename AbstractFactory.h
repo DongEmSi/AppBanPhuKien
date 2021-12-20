@@ -6,7 +6,7 @@
 
 class AbstractFactory {
 public: 
-    virtual BanPhim *CreateBanPhim(string loai, string bienthe, string ten, string mau, double gia, int sl) const = 0;
-    virtual ManHinh *CreateManHinh(string loai, string bienthe, string ten, string mau, double gia, int sl) const = 0;
-    virtual Chuot *CreateChuot(string loai, string bienthe, string ten, string mau, double gia, int sl) const = 0;
+    virtual BanPhim *CreateBanPhim(loai Loai, bienthe BienThe, string Ten, string Mau, double Gia, int Sl) const = 0;
+    virtual ManHinh *CreateManHinh(loai Loai, bienthe BienThe, string Ten, string Mau, double Gia, int Sl) const = 0;
+    virtual Chuot *CreateChuot(loai Loai, bienthe BienThe, string Ten, string Mau, double Gia, int Sl) const = 0;
 };

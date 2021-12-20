@@ -6,11 +6,19 @@
 #include "AbstractFactory.h"
 
 int main() {
+    srand(time(0));
     QuanLySanPham ql;
 
     ql.DocFile("ListSP.txt");
-
-    ql.GhiFile("output.txt");
+    ql.StartCheck();
+    ql.ThemSanPham(ql.RandomSanPham());
+    ql.ThemSanPham(ql.RandomSanPham());
+    ql.ThemSanPham(ql.RandomSanPham());
+    ql.ThanhToan();
+    //ql.TimSanPhamTheoBienThe("toi gian");
+    //ql.TimSanPhamTheoLoai("ban phim");
+    //ql.TimSanPhamTheoTen("A00");
+    ql.GhiFile("ListSP.txt");
 
     return 0;
 }
