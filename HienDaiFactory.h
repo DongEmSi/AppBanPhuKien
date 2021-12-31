@@ -5,13 +5,13 @@
 
 class HienDaiFactory : public AbstractFactory {
 public:
-    BanPhim *CreateBanPhim(loai Loai, bienthe BienThe, string Ten, string Mau, double Gia, int Sl) const {
+    BanPhim* CreateBanPhim(loai Loai, bienthe BienThe, string Ten, string Mau, long Gia, int Sl) const {
         return new BanPhimHienDai(Loai, BienThe, Ten, Mau, Gia, Sl);
     }
-    ManHinh *CreateManHinh(loai Loai, bienthe BienThe, string Ten, string Mau, double Gia, int Sl) const {
+    ManHinh* CreateManHinh(loai Loai, bienthe BienThe, string Ten, string Mau, long Gia, int Sl) const {
         return new ManHinhHienDai(Loai, BienThe, Ten, Mau, Gia, Sl);
     }
-    Chuot *CreateChuot(loai Loai, bienthe BienThe, string Ten, string Mau, double Gia, int Sl) const {
+    Chuot* CreateChuot(loai Loai, bienthe BienThe, string Ten, string Mau, long Gia, int Sl) const {
         return new ChuotHienDai(Loai, BienThe, Ten, Mau, Gia, Sl);
     }
 };

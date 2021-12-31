@@ -21,8 +21,9 @@ private:
     vector <bool> ManHinh;
     vector <bool> BanPhim;
     vector <bool> Chuot;
-    vector <Item*> VoHang;
-
+    bool CheckAllFull();
+    bool CheckLoaiFull(loai in);
+    bool CheckBientheFull(bienthe in);
 public:
     ~QuanLySanPham();
     void StartCheck();
@@ -35,5 +36,18 @@ public:
     Item* RandomLoai(loai in);
     Item* RandomBienThe(bienthe in);
     void ThemSanPham(Item* in);
+    void ThemVaoMucTG(Item* in);
+    void ThemVaoMucGM(Item* in);
+    void ThemVaoMucHD(Item* in);
+    vector <Item*> GoiY;
+    vector <Item*> VoHang;
+    vector <Item*> MucToiGian;
+    vector <Item*> MucGaming;
+    vector <Item*> MucHD;
+    void GoiYSanPham(Item* in);
+    void XuatManHinhGoiY();
+    void XuatManHinhGioHang();
+    void XuatManHinhMuc();
+    Item* RandomBienThevaLoai(loai in1, bienthe in2);
     void ThanhToan();
 };

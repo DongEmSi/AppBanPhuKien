@@ -2,24 +2,80 @@
 #include "Item.h"
 
 class BanPhim : public Item {
-protected: 
+protected:
     bienthe BienThe;
-    
+
 public:
-    void Xuat(ostream &os) {
+    void Xuat(ostream& os) {
         os << Loai << "," << BienThe << "," << Ten << "," << Mau << "," << Gia << "," << SL << endl;
     }
 
     void XuatThongTin() {
-        if (Loai == 0) cout << "Ban phim ";
-        else if (Loai == 1) cout << "Chuot ";
-        else cout << "Man hinh";
-        if (BienThe == 0) cout << "gaming ";
-        else if (BienThe == 1) cout << "toi gian ";
-        else cout << "hien dai ";
-        cout << Ten << endl;
-        cout << "Mau: " << Mau << endl;
-        cout << "Gia: " << Gia << endl;
+        int x = 0;
+        wstring s = L"";
+        if (Loai == 0)
+        {
+            x = 50;
+            gotoxy(50, 13);
+            s += L"Ban phim ";
+        }
+        else if (Loai == 1)
+        {
+            x = 10;
+            gotoxy(10, 13);
+            s += L"Chuot ";
+        }
+        else
+        {
+            x = 95;
+            gotoxy(95, 13);
+            s += L"Man hinh ";
+        }
+        if (BienThe == 0)
+        {
+            s += L"gaming";
+            wcout << s;
+        }
+        else if (BienThe == 1)
+        {
+            s += L"toi gian";
+            wcout << s;
+        }
+        else
+        {
+            s += L"hien dai";
+            wcout << s;
+        }
+        gotoxy(x, 14); wcout << utf8ToUtf16(Ten) << endl;
+        gotoxy(x, 15); wcout << L"Mau: " << utf8ToUtf16(Mau) << endl;
+        gotoxy(x, 16); wcout << L"Gia: " << utf8ToUtf16(to_string(Gia)) << endl;
     }
+
+    void XuatThongTinGio(int& y)
+    {
+        wstring s = L"";
+        if (Loai == 0)
+            s += L"Ban phim ";
+        else if (Loai == 1)
+            s += L"Chuot ";
+        else
+            s += L"Man hinh ";
+
+        if (BienThe == 0)
+            s += L"gaming.";
+        else if (BienThe == 1)
+            s += L"toi gian.";
+        else
+            s += L"hien dai.";
+
+        y++;
+        gotoxy(50, y); wcout << L"Ten san pham: " << s;
+        y++;
+        gotoxy(50, y); wcout << L"Ma san pham: " << utf8ToUtf16(Ten);
+        y++;
+        gotoxy(50, y); wcout << L"Mau san pham: " << utf8ToUtf16(Mau);
+        y++;
+    }
+
     friend class QuanLySanPham;
 };
