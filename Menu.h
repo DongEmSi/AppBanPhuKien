@@ -401,6 +401,7 @@ void menuThemVaoGio(QuanLySanPham& ql)
 						gotoxy(50, i); wcout << L"                 ";
 						gotoxy(95, i); wcout << L"                 ";
 					}
+					ql.StartCheck();
 					ql.GoiYSanPham(ql.RandomLoai(banphim));
 					ql.GoiYSanPham(ql.RandomLoai(chuot));
 					ql.GoiYSanPham(ql.RandomLoai(manhinh));
@@ -735,6 +736,7 @@ void menuTheoMuc(QuanLySanPham& ql)
 						gotoxy(100, i); wcout << L"                 ";
 					}
 
+					ql.StartCheck();
 					ql.ThemVaoMucTG(ql.RandomBienThevaLoai(banphim, gaming));
 					ql.ThemVaoMucTG(ql.RandomBienThevaLoai(chuot, gaming));
 					ql.ThemVaoMucTG(ql.RandomBienThevaLoai(manhinh, gaming));
