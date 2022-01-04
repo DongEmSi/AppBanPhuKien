@@ -207,8 +207,8 @@ void menuThemVaoGio(QuanLySanPham& ql)
 
 	ql.DocFile("ListSP.txt");
 	ql.StartCheck();
-	ql.GoiYSanPham(ql.RandomLoai(banphim));
 	ql.GoiYSanPham(ql.RandomLoai(chuot));
+	ql.GoiYSanPham(ql.RandomLoai(banphim));
 	ql.GoiYSanPham(ql.RandomLoai(manhinh));
 	ql.XuatManHinhGoiY();
 
@@ -397,13 +397,13 @@ void menuThemVaoGio(QuanLySanPham& ql)
 			
 					for (int i = 13; i <= 16; i++)
 					{
-						gotoxy(10, i); wcout << L"                 ";
-						gotoxy(50, i); wcout << L"                 ";
-						gotoxy(95, i); wcout << L"                 ";
+						gotoxy(10, i); wcout << L"                       ";
+						gotoxy(50, i); wcout << L"                       ";
+						gotoxy(95, i); wcout << L"                       ";
 					}
 					ql.StartCheck();
-					ql.GoiYSanPham(ql.RandomLoai(banphim));
 					ql.GoiYSanPham(ql.RandomLoai(chuot));
+					ql.GoiYSanPham(ql.RandomLoai(banphim));
 					ql.GoiYSanPham(ql.RandomLoai(manhinh));
 					ql.XuatManHinhGoiY();
 				}
@@ -526,15 +526,15 @@ void menuTheoMuc(QuanLySanPham& ql)
 
 	ql.DocFile("ListSP.txt");
 	ql.StartCheck();
-	ql.ThemVaoMucTG(ql.RandomBienThevaLoai(banphim, gaming));
-	ql.ThemVaoMucTG(ql.RandomBienThevaLoai(chuot, gaming));
-	ql.ThemVaoMucTG(ql.RandomBienThevaLoai(manhinh, gaming));
+	ql.ThemVaoMucTG(ql.RandomBienThevaLoai(banphim, toigian));
+	ql.ThemVaoMucTG(ql.RandomBienThevaLoai(chuot, toigian));
+	ql.ThemVaoMucTG(ql.RandomBienThevaLoai(manhinh, toigian));
 	ql.ThemVaoMucHD(ql.RandomBienThevaLoai(banphim, hiendai));
 	ql.ThemVaoMucHD(ql.RandomBienThevaLoai(chuot, hiendai));
 	ql.ThemVaoMucHD(ql.RandomBienThevaLoai(manhinh, hiendai));
-	ql.ThemVaoMucGM(ql.RandomBienThevaLoai(banphim, toigian));
-	ql.ThemVaoMucGM(ql.RandomBienThevaLoai(chuot, toigian));
-	ql.ThemVaoMucGM(ql.RandomBienThevaLoai(manhinh, toigian));
+	ql.ThemVaoMucGM(ql.RandomBienThevaLoai(banphim, gaming));
+	ql.ThemVaoMucGM(ql.RandomBienThevaLoai(chuot, gaming));
+	ql.ThemVaoMucGM(ql.RandomBienThevaLoai(manhinh, gaming));
 	ql.XuatManHinhMuc();
 
 	Textcolor(9);
@@ -737,17 +737,17 @@ void menuTheoMuc(QuanLySanPham& ql)
 					}
 
 					ql.StartCheck();
-					ql.ThemVaoMucTG(ql.RandomBienThevaLoai(banphim, gaming));
-					ql.ThemVaoMucTG(ql.RandomBienThevaLoai(chuot, gaming));
-					ql.ThemVaoMucTG(ql.RandomBienThevaLoai(manhinh, gaming));
+					ql.ThemVaoMucTG(ql.RandomBienThevaLoai(banphim, toigian));
+					ql.ThemVaoMucTG(ql.RandomBienThevaLoai(chuot, toigian));
+					ql.ThemVaoMucTG(ql.RandomBienThevaLoai(manhinh, toigian));
 					
 					ql.ThemVaoMucHD(ql.RandomBienThevaLoai(banphim, hiendai));
 					ql.ThemVaoMucHD(ql.RandomBienThevaLoai(chuot, hiendai));
 					ql.ThemVaoMucHD(ql.RandomBienThevaLoai(manhinh, hiendai));
 
-					ql.ThemVaoMucGM(ql.RandomBienThevaLoai(banphim, toigian));
-					ql.ThemVaoMucGM(ql.RandomBienThevaLoai(chuot, toigian));
-					ql.ThemVaoMucGM(ql.RandomBienThevaLoai(manhinh, toigian));
+					ql.ThemVaoMucGM(ql.RandomBienThevaLoai(banphim, gaming));
+					ql.ThemVaoMucGM(ql.RandomBienThevaLoai(chuot, gaming));
+					ql.ThemVaoMucGM(ql.RandomBienThevaLoai(manhinh, gaming));
 					ql.XuatManHinhMuc();
 
 				}
